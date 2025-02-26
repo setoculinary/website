@@ -147,6 +147,45 @@ nav {
     }
 }
 
+@media (max-width: 768px) {
+    .logo-seto {
+        font-size: 2rem;
+    }
+    
+    .logo-rest {
+        font-size: 1.2rem;
+    }
+    
+    .logo-slogan {
+        font-size: 1rem;
+    }
+    
+    .logo-text {
+        height: 70px;
+    }
+    
+    .nav-right {
+        gap: 0.5rem;
+    }
+
+    .contact-info {
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .logo-wrapper {
+        gap: 1rem;
+    }
+    
+    .logo {
+        margin-top: -3px;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -756,44 +795,5 @@ footer {
 
     .title h2 {
         font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-seto {
-        font-size: 2.2rem;
-    }
-    
-    .logo-rest {
-        font-size: 1.3rem;
-    }
-    
-    .logo-slogan {
-        font-size: 1.2rem;
-    }
-    
-    .logo-text {
-        height: 80px;
-    }
-    
-    .nav-right {
-        gap: 0.5rem;
-    }
-
-    .contact-info {
-        font-size: 0.9rem;
-        gap: 0.5rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-    
-    .logo-wrapper {
-        gap: 1rem;
-    }
-    
-    .logo {
-        margin-top: -3px;
     }
 }
