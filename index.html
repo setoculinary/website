@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Seto Culinary Academy - Premier Cooking School in Damak</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -223,53 +223,40 @@
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form id="enquiry-form">
+                        <form id="enquiry-form" action="http://localhost:3000/form" method="post">
                             <div class="input-grid">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Your Name" required>
-                                        <i class="fas fa-user"></i>
+                                        <input type="text" class="form-control" name="name" placeholder="Your Name" required> <i class="fas fa-user"></i>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="email" class="form-control" placeholder="Your Email" required>
-                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email" required> <i class="fas fa-envelope"></i>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input type="tel" class="form-control" placeholder="Your Phone" required>
-                                        <i class="fas fa-phone"></i>
+                                        <input type="tel" class="form-control" name="phone" placeholder="Your Phone" required> <i class="fas fa-phone"></i>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <select class="form-control" required>
+                                        <select class="form-control" name="course" required>
                                             <option value="">Select Course</option>
                                             <option value="japanese">Japanese Cuisine</option>
                                             <option value="nepali">Nepali & Indian Cuisine</option>
-                                            <option value="chinese">Chinese Cuisine</option>
-                                            <option value="continental">Continental & Italian Cuisine</option>
-                                            <option value="sushi">Sushi Making</option>
-                                            <option value="ramen">Ramen</option>
-                                            <option value="naan">Naan and Tandoor</option>
-                                            <option value="bakery">Bakery and Patisserie</option>
-                                        </select>
-                                        <i class="fas fa-graduation-cap"></i>
+                                            </select> <i class="fas fa-graduation-cap"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group">
-                                    <textarea class="form-control" placeholder="Your Message" rows="4" required></textarea>
-                                    <i class="fas fa-comment"></i>
+                                    <textarea class="form-control" name="message" placeholder="Your Message" rows="4" required></textarea> <i class="fas fa-comment"></i>
                                 </div>
                             </div>
                             <div class="form-group text-right">
-                                <button type="submit" class="submit-button">
-                                    Book Now <i class="fas fa-arrow-right"></i>
-                                </button>
+                                <button type="submit" class="submit-button">Book Now <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </form>
                     </div>

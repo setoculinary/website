@@ -52,3 +52,57 @@ document.querySelectorAll('section').forEach(section => {
     section.classList.add('hidden');
     observer.observe(section);
 });
+
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('enquiry-form');
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Create a loading state
+        const submitButton = form.querySelector('.submit-button');
+        const originalButtonText = submitButton.innerHTML;
+        submitButton.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+        submitButton.disabled = true;
+        
+        // Get form data
+        const formData = new FormData(form);
+        const formDataObject = {};
+        
+        // Convert FormData to JSON object
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
+        });
+        
+        try {
+            // Send POST request to the server
+            const response = await fetch('http://localhost:3000/form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataObject)
+            });
+            
+            const data = await response.json();
+            
+            // Show success message
+            alert('Form submitted successfully!');
+            
+            // Reset form
+            form.reset();
+            
+        } catch (error) {
+            // Handle errors
+            console.error('Error:', error);
+            alert('There was an error submitting the form. Please try again.');
+            
+        } finally {
+            // Reset button state
+            submitButton.innerHTML = originalButtonText;
+            submitButton.disabled = false;
+        }
+    });
+});
