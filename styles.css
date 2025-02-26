@@ -21,6 +21,7 @@ header {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
 nav {
@@ -34,63 +35,58 @@ nav {
 .logo-container {
     display: flex;
     align-items: center;
-    padding-left: 0;
-    margin-left: 0;
 }
 
 .logo-wrapper {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding-left: 0;
-    margin-left: 0;
+    gap: 1rem;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100px;
+    height: auto;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: -5px;
 }
 
 .header-logo {
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 100px;
     object-fit: contain;
-    margin-top: 5px;
-    margin-left: 15px;
+    margin: 0;
 }
 
 .logo-seto {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 1;
+    letter-spacing: 2px;
+    line-height: 1.2;
     color: white;
 }
 
 .logo-rest {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: white;
-    margin-top: -10px; /* Reduce this to move it closer to .logo-slogan */
+    margin-top: 0;
 }
 
 .logo-slogan {
     font-family: 'Alex Brush', cursive;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: white;
     opacity: 0.9;
-    margin-top: -5px; /* Adjust this value */
+    margin-top: 5px;
     font-style: italic;
+    white-space: nowrap;
 }
 
 .nav-right {
@@ -187,15 +183,15 @@ nav {
     }
 
     .logo-seto {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .logo-rest {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .logo-slogan {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .logo-text {
@@ -221,6 +217,46 @@ nav {
 
     .logo {
         margin-top: -3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-seto {
+        font-size: 1.5rem;
+    }
+
+    .logo-rest {
+        font-size: 1rem;
+    }
+
+    .logo-slogan {
+        font-size: 0.8rem;
+    }
+
+    .header-logo {
+        width: 80px;
+    }
+
+    .logo-wrapper {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-seto {
+        font-size: 1.2rem;
+    }
+
+    .logo-rest {
+        font-size: 0.8rem;
+    }
+
+    .logo-slogan {
+        font-size: 0.7rem;
+    }
+
+    .header-logo {
+        width: 60px;
     }
 }
 
