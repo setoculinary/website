@@ -221,8 +221,18 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .logo-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header-logo {
+        width: 60px;
+        margin-right: 10px;
+    }
+
     .logo-seto {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .logo-rest {
@@ -232,31 +242,23 @@ nav {
     .logo-slogan {
         font-size: 0.8rem;
     }
-
-    .header-logo {
-        width: 80px;
-    }
-
-    .logo-wrapper {
-        gap: 0.5rem;
-    }
 }
 
 @media (max-width: 480px) {
+    .header-logo {
+        width: 50px;
+    }
+
     .logo-seto {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .logo-rest {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .logo-slogan {
         font-size: 0.7rem;
-    }
-
-    .header-logo {
-        width: 60px;
     }
 }
 
