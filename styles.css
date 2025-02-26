@@ -21,7 +21,7 @@ header {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 nav {
@@ -227,7 +227,7 @@ nav {
     }
 
     .header-logo {
-        width: 60px;
+        width: 80px;
         margin-right: 10px;
     }
 
@@ -236,29 +236,29 @@ nav {
     }
 
     .logo-rest {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .logo-slogan {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .header-logo {
-        width: 50px;
+        width: 70px;
     }
 
     .logo-seto {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .logo-rest {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .logo-slogan {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 }
 
