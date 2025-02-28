@@ -14,7 +14,12 @@ body {
 
 /* Mobile menu button */
 .mobile-menu-btn {
-    display: none;
+    display: block; /* Ensure it's always visible on mobile */
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
     background: none;
     border: none;
     color: white;
@@ -49,7 +54,9 @@ nav {
 
 .logo-container {
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding-right: 3rem; /* Make space for menu button */
 }
 
 .logo-wrapper {
@@ -191,7 +198,7 @@ nav {
     }
 
     .logo-seto {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         white-space: nowrap;
     }
 
