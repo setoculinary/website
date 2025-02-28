@@ -21,15 +21,17 @@ header {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
 }
 
 nav {
     background: #1034A6;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo-container {
@@ -221,26 +223,58 @@ nav {
 }
 
 @media (max-width: 768px) {
+    /* Navigation */
+    header {
+        padding: 5px 0;
+    }
+    
+    nav {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
     .logo-wrapper {
-        flex-direction: row;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .logo-text {
         align-items: center;
     }
 
-    .header-logo {
-        width: 80px;
-        margin-right: 10px;
+    .nav-right {
+        width: 100%;
+        padding: 0;
+        align-items: center;
     }
 
-    .logo-seto {
-        font-size: 1.8rem;
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
     }
 
-    .logo-rest {
-        font-size: 1.2rem;
+    .contact-info .separator {
+        display: none;
     }
 
-    .logo-slogan {
-        font-size: 1rem;
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        padding: 0.5rem;
+        display: block;
     }
 }
 
