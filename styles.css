@@ -12,6 +12,17 @@ body {
     padding-top: 70px;
 }
 
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
 /* Navigation */
 header {
     background-color: #1034A6;
@@ -32,6 +43,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .logo-container {
@@ -49,20 +62,12 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
-}
-
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .header-logo {
+    width: 80px;
     height: auto;
-    width: 100px;
     object-fit: contain;
-    margin: 0;
 }
 
 .logo-seto {
@@ -96,7 +101,6 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
-    padding-right: 2rem;
 }
 
 .contact-info {
@@ -139,160 +143,102 @@ nav {
 }
 
 @media (max-width: 1024px) {
-    .contact-info {
-        font-size: 0.85rem;
-        gap: 0.5rem;
+    nav {
+        padding: 0.8rem;
     }
-
-    .nav-right {
-        padding-right: 1rem;
+    
+    .logo-seto {
+        font-size: 1.8rem;
+    }
+    
+    .logo-rest {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    .logo-wrapper {
+        padding: 0.5rem;
+    }
+
+    .header-logo {
+        width: 60px;
+    }
+
     .nav-right {
-        padding-right: 0.5rem;
+        display: none;
+        width: 100%;
+        padding: 1rem 0;
+        background: #1034A6;
+        align-items: center;
+    }
+
+    .nav-right.active {
+        display: flex;
     }
 
     .contact-info {
-        font-size: 0.8rem;
-        gap: 0.3rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .contact-info a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .separator {
         display: none;
     }
 
-    .contact-info a {
-        display: block;
-        width: 100%;
-        text-align: right;
-    }
-
     .nav-links {
         flex-direction: column;
+        align-items: center;
         width: 100%;
-        text-align: center;
-        padding: 0.5rem 0;
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    .header-logo {
-        height: 80px;
-    }
-
-    .logo-seto {
-        font-size: 1.5rem;
-    }
-
-    .logo-rest {
-        font-size: 1rem;
-    }
-
-    .logo-slogan {
-        font-size: 0.8rem;
-    }
-
-    .logo-text {
-        height: 70px;
-    }
-
-    .nav-right {
-        gap: 0.5rem;
-    }
-
-    .contact-info {
-        font-size: 0.9rem;
-        gap: 0.5rem;
-    }
-
-    .nav-links {
         gap: 1rem;
-    }
-
-    .logo-wrapper {
-        gap: 1rem;
-    }
-
-    .logo {
-        margin-top: -3px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Navigation */
-    header {
-        padding: 5px 0;
-    }
-    
-    nav {
-        flex-direction: column;
-        padding: 0.5rem 1rem;
-        width: 100%;
-    }
-
-    .logo-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
-    .logo-text {
-        align-items: center;
-    }
-
-    .nav-right {
-        width: 100%;
-        padding: 0;
-        align-items: center;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    .contact-info .separator {
-        display: none;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
         padding: 1rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-links li {
-        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links a {
-        padding: 0.5rem;
         display: block;
+        padding: 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .header-logo {
-        width: 70px;
-    }
-
     .logo-seto {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
-
+    
     .logo-rest {
-        font-size: 1.1rem;
-    }
-
-    .logo-slogan {
         font-size: 0.9rem;
+    }
+    
+    .logo-slogan {
+        font-size: 0.8rem;
     }
 }
 
