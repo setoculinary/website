@@ -8,18 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navigation background change on scroll
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.style.backgroundColor = '#fff';
-        header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-    } else {
-        header.style.backgroundColor = 'transparent';
-        header.style.boxShadow = 'none';
-    }
-});
-
 // Contact form submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
@@ -148,6 +136,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset button state
             submitButton.innerHTML = originalButtonText;
             submitButton.disabled = false;
-        }
-    });
+        }
+    });
+
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav-right')) {
+            navLinks.classList.remove('active');
+        }
+    });
 });
